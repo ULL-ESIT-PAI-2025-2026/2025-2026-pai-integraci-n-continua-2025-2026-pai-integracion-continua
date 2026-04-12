@@ -1,6 +1,9 @@
 # example of the need workflow
 name: Need Example
 on:
+ push:
+   branches:
+     - github-actions-fundamentals
  workflow_dispatch: 
 jobs:
   example:
