@@ -14,8 +14,6 @@ jobs:
           echo "You can customize this workflow to fit your needs."
           echo "For example, you can add steps to run tests, build your project, or deploy your application."
           echo "The possibilities are endless!"
-      - name: Force failure
-        run: exit 1
   required:
     needs: example
     runs-on: ubuntu-latest
