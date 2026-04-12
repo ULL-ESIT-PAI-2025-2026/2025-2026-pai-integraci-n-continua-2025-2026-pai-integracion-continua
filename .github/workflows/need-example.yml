@@ -1,0 +1,51 @@
+# example of the need workflow
+name: Need Example
+on:
+  workflow_dispatch:
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run the need example
+        run: |
+          echo "This is an example of the need workflow."
+          echo "You can customize this workflow to fit your needs."
+          echo "For example, you can add steps to run tests, build your project, or deploy your application."
+          echo "The possibilities are endless!"
+      - name: Force failure
+        run: exit 1
+  required:
+    needs: example
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run the required step
+        run: |
+          echo "This step runs after the example step is completed."
+          echo "You can add any steps you need here, and they will only run if the example step is successful."
+          echo "This is useful for creating dependencies between steps in your workflow."
+  failure:
+    needs: example
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run the failed step
+        run: |
+          echo "This step runs if the example step fails."
+          echo "You can use this to handle errors or perform cleanup tasks if something goes wrong in the example step."
+          exit 1
+  never_reach:
+    needs: failure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run the never reach step
+        run: |
+          echo "This step will never run because the failure step always fails."
+          echo "This is just to demonstrate that you can have steps that are dependent on other steps, and if those steps fail, the dependent steps will not run."
+    
