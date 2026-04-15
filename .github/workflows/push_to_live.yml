@@ -38,7 +38,7 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git checkout main
           git merge origin/staging -m "Merge staging into main"
-          git push origin main
+          git push origin main --force
       - name: push artifact
         uses: actions/upload-artifact@v3
         with:
