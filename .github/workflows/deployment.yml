@@ -16,8 +16,7 @@ concurrency:
   cancel-in-progress: true
 # Define the jobs to run in this workflow
 jobs: 
-  # name of the job, in this case, build
-  build:
+  tests:
     # The os to run the job on
     runs-on: ubuntu-latest 
     # Steps to execute in the build job
@@ -38,13 +37,41 @@ jobs:
 
       - name: Build project
         run: npm run build
+      - name: Run tests
+        run: npm test
+  build:
+    needs: tests
+    # The os to run the job on
+    runs-on: ubuntu-latest 
+    # Steps to execute in the build job
+    steps: 
+      # Each step is preceded by the - character, and the name of the step is defined by the name key
+      - name: Checkout repository
+        # The uses key specifies an action to use, in this case, the checkout action to clone the repository
+        uses: actions/checkout@v4 
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+      - name: typedoc
+        run: npx typedoc
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: build-output
           path: dist
+  
 
+        
   deploy:
     needs: build
     runs-on: ubuntu-latest
