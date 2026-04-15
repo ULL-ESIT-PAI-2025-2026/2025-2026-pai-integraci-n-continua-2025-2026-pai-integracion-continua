@@ -1,5 +1,5 @@
 # This workflow is triggered manually from the Actions tab in GitHub
-name: Push to Live
+name: clear
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ concurrency:
 ## from main, it merges with staging
 # this file is the only file that is saved(this is executed from main, it merges with staging)
 jobs:
-  push-to-live:
+  clear_repo:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main branch
@@ -25,7 +25,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-      - name: Merge staging into main
+      - name: delete all but yml
         run: |
           find . -not -name "*.yml" -not -name ".git" -type f -delete
           git commit -m "Merge staging into main"
