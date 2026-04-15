@@ -28,6 +28,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout origin/staging
+          git commit -m "Merge staging into main" --allow-empty
       - name: Merge staging into main
         run: |
           git checkout main -- .
