@@ -3,8 +3,9 @@
     "target": "es2022",
     "module": "ESNext",
     "moduleResolution": "node",
+    "ignoreDeprecations": "5.0",
     "allowJs": true,
-    "rootDir": "./src",              
+    "rootDir": "./src",
     "outDir": "./dist",
     "declaration": true,
     "alwaysStrict": true,
@@ -19,12 +20,14 @@
     "skipLibCheck": true,
     "useUnknownInCatchVariables": false
   },
-  "include": ["src/**/*"],            
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
     "node_modules",
     "dist",
     "docs",
-    "eslint.config.js",              
+    "eslint.config.js",
     "typedoc.json"
   ]
 }

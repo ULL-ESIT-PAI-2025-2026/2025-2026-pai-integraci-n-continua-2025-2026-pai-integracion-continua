@@ -8,6 +8,7 @@
     "docs": "typedoc",
     "docs:serve:bg": "nohup npx http-server docs -p 8081 > docs-server.log 2>&1 &",
     "game:serve:bg": "nohup npx http-server . -p 8080 > game-server-log 2>&1 &",
+    "build": "vite build",
     "push": "rm *~; git pull; git add . ; git commit -m 'Code improvement'; git push",
     "pull": "git pull",
     "test": "jest",
@@ -24,7 +25,7 @@
     "@exercism/eslint-config-typescript": "^0.4.1",
     "@types/jest": "^30.0.0",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
-    "babel-jest": "^27.5.1",
+    "babel-jest": "^29.7.0",
     "core-js": "^3.21.0",
     "eslint": "^8.33.0",
     "eslint-config-standard-with-typescript": "^34.0.0",
@@ -36,5 +37,8 @@
     "tsc-watch": "^6.0.0",
     "typedoc": "^0.28.17",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "vite": "^8.0.8"
   }
 }
