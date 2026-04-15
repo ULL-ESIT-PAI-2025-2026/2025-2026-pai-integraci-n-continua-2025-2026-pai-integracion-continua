@@ -1,11 +1,12 @@
 name: Deployment
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - deployment
   # Allow manual triggering of the workflow
-  workflow_dispatch: 
+
 
 # Set permissions for the GITHUB_TOKEN
 permissions: 
