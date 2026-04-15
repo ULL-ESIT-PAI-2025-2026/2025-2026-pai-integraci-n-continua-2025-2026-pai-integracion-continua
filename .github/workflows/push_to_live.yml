@@ -27,7 +27,7 @@ jobs:
           
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout staging
+          git checkout origin/staging
       - name: Merge staging into main
         run: |
           git checkout main -- .
