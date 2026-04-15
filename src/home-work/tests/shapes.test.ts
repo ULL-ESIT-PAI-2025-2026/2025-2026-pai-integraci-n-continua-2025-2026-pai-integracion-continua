@@ -183,7 +183,7 @@ describe('Circle', () => {
   });
 
   it('should compute area correctly for negative radius', () => {
-    expect(new Circle('yellow', 0, 0, -3).getArea()).toBeCloseTo(Math.PI * 9, 5);
+    expect(new Circle('yellow', 0, 1, -3).getArea()).toBeCloseTo(Math.PI * 9, 5);
   });
 
   it('should compute area correctly for decimal radius', () => {
