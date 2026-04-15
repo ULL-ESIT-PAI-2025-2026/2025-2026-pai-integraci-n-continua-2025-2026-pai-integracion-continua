@@ -135,7 +135,7 @@ describe('Triangle (equilateral)', () => {
 
   it('should compute area correctly for positive side', () => {
     const expected = (Math.sqrt(3) / 4) * 16;
-    expect(new Triangle('blue', 0, 0, 4).getArea()).toBeCloseTo(expected, 5);
+    expect(new Triangle('blue', 0, 0, 6).getArea()).toBeCloseTo(expected, 5);
   });
 
   it('should compute area correctly for zero side', () => {
