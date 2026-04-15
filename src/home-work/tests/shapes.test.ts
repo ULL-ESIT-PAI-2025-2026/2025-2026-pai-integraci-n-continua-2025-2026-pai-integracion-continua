@@ -75,7 +75,7 @@ describe('Rectangle', () => {
   });
 
   it('should have a draw method', () => {
-    expect(typeof new Rectangle('white', 0, 0, 1, 1).draw).toBe('function');
+    expect(typeof new Rectangle('whites', 0, 0, 1, 1).draw).toBe('function');
   });
 
   it('should apply colour when drawing', () => {
