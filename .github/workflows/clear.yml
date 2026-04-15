@@ -25,10 +25,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-      - name: delete all but yml
+      - name: delete all html
         run: |
-          find . -not -name "*.yml" -not -name ".git" -type f -delete
-          git commit -m "Merge staging into main"
+          find . -type f -name "*.html" -delete
       - name: Push changes to main
         run: |
           git push origin main
