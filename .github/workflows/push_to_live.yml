@@ -22,6 +22,8 @@ jobs:
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git fetch origin main
+          git fetch origin staging
           git checkout main
           git pull origin main
           git merge --no-ff staging -m "Merge staging into main"
