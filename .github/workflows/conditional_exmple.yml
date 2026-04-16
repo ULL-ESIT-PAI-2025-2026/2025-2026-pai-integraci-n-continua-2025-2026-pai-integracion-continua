@@ -1,0 +1,30 @@
+name: Simple Conditions
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Build always runs"
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    if: true
+    steps:
+      - run: echo "Tests run"
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: false
+    steps:
+      - run: echo "Deploy will NOT run"
+
+  always-job:
+    needs: [build, test, deploy]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - run: echo "This always runs"
