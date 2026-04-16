@@ -46,7 +46,7 @@ Continuous Integration (CI) is a development practice where:
 
 ## ⚙️ GitHub Actions in CI
 
-:contentReference[oaicite:0]{index=0} is an automation tool integrated into GitHub.
+Gihub Actions is an automation tool integrated into GitHub.
 
 It allows workflows to run automatically when events occur such as:
 
@@ -65,7 +65,7 @@ It allows workflows to run automatically when events occur such as:
 
 ## 🌐 Deployment with GitHub Pages
 
-:contentReference[oaicite:1]{index=1} allows you to host static web applications directly from a repository.
+Github Pages allows you to host static web applications directly from a repository.
 
 In this project:
 
@@ -77,7 +77,7 @@ In this project:
 
 ## ⚡ Vite as a Development Tool
 
-:contentReference[oaicite:2]{index=2} is a modern frontend build tool designed for speed and simplicity.
+Vite is a modern frontend build tool designed for speed and simplicity.
 
 ### Key features:
 
