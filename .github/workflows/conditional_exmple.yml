@@ -27,7 +27,7 @@ jobs:
       - run: echo "Deploy will NOT run"
 
   always-job:
-    needs: [build, test, deploy]
+    needs: deploy
     runs-on: ubuntu-latest
     if: always()
     steps:
