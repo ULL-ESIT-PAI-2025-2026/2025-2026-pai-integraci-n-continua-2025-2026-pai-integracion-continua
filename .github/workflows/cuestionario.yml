@@ -1,0 +1,44 @@
+# example of the need workflow
+name: Need Example
+on:
+  push:
+   branches:
+     - github-actions-fundamentals
+  workflow_dispatch: 
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+  second_job:
+    needs: first_job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run the second job
+        run: |
+          exit 1
+  third_job:
+    needs: second_job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run the third job
+        run: | 
+          echo "hello"
+  fourth_job:
+    needs: third_job
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Echo friends
+        run: echo "friends"
+  fifth_job:
+    needs: [fourth_job, third_job]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run the fifth job
+        run: |
+          echo "goodbye"
