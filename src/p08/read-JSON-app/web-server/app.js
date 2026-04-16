@@ -15,39 +15,29 @@
  */
 
 import express from 'express';
-import fetch from 'node-fetch';       // To make http requests
-import path from 'path';              // provides utilities for working with file and directory paths.
-import { fileURLToPath } from 'url';  // Used to convert a file URL to a file path.
-import { dirname } from 'path';       // The dirname function from the path module is used to get the directory name of a file path.
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
-
-//set the port
 app.set('port', 8080);
 
-// define a route for fetching data
-// When a GET request is made to the '/data' endpoint, the code inside the callback function will be executed. 
-// The function uses node-fetch to make a request to an external API, then sends the response as JSON to the client.
 app.get('/data', async (req, res) => {
   try {
-    const URL = 'https://www.santacruzdetenerife.es/opendata/dataset/93b7d1bd-1b21-4f43-9316-671e2021f7fc/resource/0fa54a6d-35ef-41c1-ab1c-9af6efe0e9f0/download/canchas_deportivas.json';
+    const URL = 'https://www.santacruzdetenerife.es/opendata/.../canchas_deportivas.json';
     const response = await fetch(URL);
+    if (!response.ok) throw new Error(`Upstream error: ${response.status}`);
     const json = await response.json();
     res.json(json);
   } catch (error) {
     console.error(error);
-    res.status(500).send('An error occurred while fetching data.');
+    res.status(500).json({ error: 'Failed to fetch data' });
   }
 });
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, '../../www')));
 
-// Tell express that we want to use the www folder
-// for our static assets
-app.use(express.static(path.join(__dirname, '../../')));
-
-// Start the server and listens for requests on the specified port
-const SERVER = app.listen(app.get('port'), '0.0.0.0', function () {
-  console.log('The server is running on http:localhost:' + app.get('port'));
+app.listen(app.get('port'), '0.0.0.0', () => {
+  console.log(`Server running at http://localhost:${app.get('port')}`);
 });
