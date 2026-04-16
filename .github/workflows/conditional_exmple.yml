@@ -1,6 +1,10 @@
 name: Simple Conditions
 
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - github-actions-fundamentals 
+  workflow_dispatch:
 
 jobs:
   build:

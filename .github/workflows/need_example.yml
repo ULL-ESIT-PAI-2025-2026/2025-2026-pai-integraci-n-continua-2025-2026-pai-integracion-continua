@@ -1,10 +1,10 @@
 # example of the need workflow
 name: Need Example
 on:
- push:
+  push:
    branches:
      - github-actions-fundamentals
- workflow_dispatch: 
+  workflow_dispatch: 
 jobs:
   example:
     runs-on: ubuntu-latest
