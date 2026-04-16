@@ -14,5 +14,5 @@
  * Main function to demonstrate the use of returnsTrue
  */
 function mainFunction() {
-    return 1;
+    throw new Error("This function always throws an error");
 }

@@ -39,7 +39,7 @@ jobs:
           echo "This step runs after the example step is completed."
           echo "This step will run a JavaScript file that returns 1."
           echo "You can use this to demonstrate how to run JavaScript files in your workflow."
-          node returns_one.js
+          node returns_error.js
   js_return_zero:
     needs: example
     runs-on: ubuntu-latest
