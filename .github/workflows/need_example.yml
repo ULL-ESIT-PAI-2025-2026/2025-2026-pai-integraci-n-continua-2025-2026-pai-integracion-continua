@@ -28,6 +28,30 @@ jobs:
           echo "This step runs after the example step is completed."
           echo "You can add any steps you need here, and they will only run if the example step is successful."
           echo "This is useful for creating dependencies between steps in your workflow."
+  js_return_one:
+    needs: example
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run the js return step
+        run: |
+          echo "This step runs after the example step is completed."
+          echo "This step will run a JavaScript file that returns 1."
+          echo "You can use this to demonstrate how to run JavaScript files in your workflow."
+          node returns_one.js
+  js_return_zero:
+    needs: example
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run the js return step
+        run: |
+          echo "This step runs after the example step is completed."
+          echo "This step will run a JavaScript file that returns 0."
+          echo "You can use this to demonstrate how to run JavaScript files in your workflow."
+          node returns_zero.js
   failure:
     needs: example
     runs-on: ubuntu-latest
