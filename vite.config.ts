@@ -14,7 +14,6 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, './index.html'),
         p07: resolve(__dirname, './src/p07/index.html'),
-        p07Circles: resolve(__dirname, './src/p07/marco-perez-padilla-circles.html'),
         p07Figures: resolve(__dirname, './src/p07/marco-perez-padilla-figures.html'),
         p08: resolve(__dirname, './src/p08/index.html'),
         p08LifeExpectancy: resolve(__dirname, './src/p08/src/home-work/life-expectancy-barchart/marco-perez-padilla-life-expectancy-bar-chart.html'),
