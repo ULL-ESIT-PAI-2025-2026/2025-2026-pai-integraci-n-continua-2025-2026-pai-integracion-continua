@@ -16,8 +16,6 @@
     "lint:ci": "eslint \"src/**/*.ts\"",
     "dev:server": "node scripts/dev-server.js",
     "start": "npm run build && node dist/main.js",
-    "dev": "vite",
-    "preview": "vite preview",
     "build:vite": "npm run build:p10 && npm run build",
     "build": "vite build",
     "build:all": "npm run build:vite && npm run docs"
