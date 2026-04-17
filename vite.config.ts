@@ -2,7 +2,7 @@ import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: './',
+  base: '/2025-2026-pai-integraci-n-continua-2025-2026-pai-integracion-continua',
   publicDir: false,
   server: {
     open: 'index.html',
