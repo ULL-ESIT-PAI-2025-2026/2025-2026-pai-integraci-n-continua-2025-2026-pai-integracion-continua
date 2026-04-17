@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Monorepo de PAI con prácticas de Canvas API, Animaciones y MVC Events",
   "private": true,
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "docs": "typedoc",
@@ -13,6 +14,8 @@
     "test": "jest",
     "lint:ci": "eslint . --ext .tsx,.ts",
     "start": "tsc-watch --onSuccess \"node dist/index.js\"",
+    "dev": "vite",
+    "preview": "vite preview",
     "build:p07": "cd src/p07 && npm install --legacy-peer-deps && npx tsc",
     "build:p08": "cd src/p08 && npm install --legacy-peer-deps && npx tsc",
     "build:p09": "cd src/p09 && npm install --legacy-peer-deps && npm run build",
