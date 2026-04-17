@@ -4,7 +4,7 @@
     "src/home-work/src/view.ts",
     "src/home-work/src/main.ts"
   ],
-  "out": "docs",
+  "out": "../../dist/src/p07/docs",
   "exclude": ["node_modules/**"],
   "name": "Práctica 7 - Programación Gráfica con Canvas",
   "includeVersion": true,

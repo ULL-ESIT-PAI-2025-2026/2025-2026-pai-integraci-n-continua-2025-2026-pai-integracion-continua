@@ -10,7 +10,7 @@
     "src/home-work/life-expectancy-barchart/life-expectancy-adapter.ts",
     "src/home-work/life-expectancy-barchart/life-expectancy-client.ts"
   ],
-  "out": "docs",
+  "out": "../../dist/src/p08/docs",
   "exclude": ["node_modules/**"],
   "name": "Práctica 8 - JSON Data Visualization",
   "includeVersion": true,
