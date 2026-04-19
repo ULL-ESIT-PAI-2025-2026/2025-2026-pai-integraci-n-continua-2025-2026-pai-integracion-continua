@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <li><a href="http://10.6.128.184:8080/index.html">Home</a></li>
+  <script defer type="module" src="/src/exercises/home-work/parabolic-trajectory/main.ts"></script>
+  <title>Iván Luis Estévez</title>
+</head>
+<body>
+  <h1>Animación de Tiro Parabólico.</h1>
+  <div id="p2">
+    <h2>Información del lanzamiento</h2>
+  </div>
+
+  <div id="p3">
+    <h2>Controles</h2>
+
+    <label style = "display: inline-block; margin-right: 20px;">
+      Velocidad inicial:
+      <input id="v0" type="number" value="50">
+    </label>
+
+    <label style = "display: inline-block; margin-right: 20px;">
+      Ángulo (grados):
+      <input id="angle" type="number" value="45">
+    </label>
+
+    <label style = "display: inline-block; margin-right: 20px;">
+      Altura inicial:
+      <input id="height" type="number" value="0">
+    </label>
+
+    <label style = "display: inline-block; margin-right: 20px;">
+      Gravedad:
+      <input id="gravity" type="number" value="9.8" step="0.1">
+    </label>
+
+    <button id="launch" style = "display: inline-block;">Lanzar</button>
+  </div>
+
+</body>
+</html>
