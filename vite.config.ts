@@ -13,9 +13,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(__dirname, './index.html'),
-        // p10Projectile: resolve(__dirname, './src/p10/src/exercises/home-work/projectile.html'),
-        // p10UML: resolve(__dirname, './src/p10/src/exercises/home-work/uml/projectile-uml.html'),
-        // p10GraphicObject: resolve(__dirname, './src/p10/src/exercises/evaluation-exercise1-title/graphic-object.html'),
+        // p10Projectile: resolve(__dirname, './src/exercises/home-work/projectile.html'),
+        // p10UML: resolve(__dirname, './src/exercises/home-work/uml/projectile-uml.html'),
+        // p10GraphicObject: resolve(__dirname, './src/exercises/evaluation-exercise1-title/graphic-object.html'),
       }
     }
   }
