@@ -1,3 +1,16 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Programación de Aplicaciones Interactivas
+ *
+ * @autor Iván Luis Estévez
+ * @desde Apr 16 2026
+ * @desc vite.config
+ *       Archivo de configuración de Vite para el proyecto.
+ *       Define la configuración de construcción,
+ *       incluyendo los puntos de entrada para las distintas páginas del proyecto.
+ */
 // @ts-nocheck
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
