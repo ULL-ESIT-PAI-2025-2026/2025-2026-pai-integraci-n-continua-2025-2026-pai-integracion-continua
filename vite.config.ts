@@ -1,3 +1,14 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado en Ingeniería Informática
+ * Programación de Aplicaciones Interactivas
+ *
+ * @author Marco Pérez Padilla
+ * @since Apr 16 2026
+ * @desc Vite configuration file for the project.
+ */
+
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
