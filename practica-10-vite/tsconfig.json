@@ -3,7 +3,7 @@
   "compilerOptions": {
     "target": "es2015",
     "module": "es2015",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "allowJs": true,
     "rootDir": "src",

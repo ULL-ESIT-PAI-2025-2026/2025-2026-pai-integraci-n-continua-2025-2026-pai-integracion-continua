@@ -10,8 +10,8 @@
  *       Clase controladora del ejercicio de trayectoria parabólica. Se encarga de manejar la lógica de la simulación, actualizar el modelo y la vista.
  */
 
-import { ProjectileModel } from '../model/projectile-model';
-import { ProjectileView } from '../view/projectile-view';
+import { ProjectileModel } from '../model/projectile-model.js';
+import { ProjectileView } from '../view/projectile-view.js';
 
 /**
  * @desc Clase controladora del ejercicio de trayectoria parabólica.
