@@ -12,10 +12,6 @@ on:
 permissions: 
   contents: write
 
-# Ensure only one deployment runs at a time
-concurrency: 
-  group: pages
-  cancel-in-progress: true
 # Define the jobs to run in this workflow
 jobs: 
   tests:
