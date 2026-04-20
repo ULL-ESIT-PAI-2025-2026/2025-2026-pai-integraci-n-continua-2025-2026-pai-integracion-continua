@@ -9,7 +9,6 @@
     "src/exercises/home-work/projectile-controller.ts",
     "src/exercises/home-work/projectile.ts"
   ],
-  // Generar documentación en dist
   "out": "dist/src/exercises/home-work/doc",
   "exclude": ["node_modules/**", "**/uml/**", "**/doc/**", "**/*.css", "**/*.html"],
   "name": "Práctica 10 - Animations: Projectile Animation",

@@ -293,7 +293,7 @@ tramp
 
 # cask packages
 .cask/
-dist/
+# dist/
 
 # Flycheck
 flycheck_*.el
@@ -370,7 +370,7 @@ tmtags
 build/
 nbbuild/
 # Queremos subir dist a github
-dist/
+# dist/
 nbdist/
 .nb-gradle/
 
